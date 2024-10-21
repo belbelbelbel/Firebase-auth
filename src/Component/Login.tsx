@@ -33,7 +33,7 @@ export const Login = () => {
     return (
         <div className='w-screen h-screen items-center justify-center flex flex-col'>
             <Toaster/>
-            <div className='w-[50%] flex flex-col gap-10'>
+            <div className='xl:w-[50%] w-[80%] flex flex-col gap-10'>
                 <div className='w-full  items-center flex flex-col'>
                     <label className='self-start font-bold tracking-[1px]'>Email</label>
                     <input placeholder='eg Bendee@gmail.com' type='text' value={email} name='email' onChange={(e) => setEmail(e.target.value)} className='text-black outline-0  w-full  font-bold  rounded-[3px]  mt-2 border-black bg-transparent border-x-0 border-t-0 border-2 h-[8vh]  p-3' />
