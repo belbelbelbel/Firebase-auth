@@ -25,7 +25,7 @@ export const Signup = () => {
       } catch (error:any) {
         console.log('eror deteccted while operarting', error.message)
         toast.error(error.message)
-        // setloading(false)
+        setloading(false)
       }
     };
     return (
