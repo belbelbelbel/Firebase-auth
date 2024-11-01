@@ -3,13 +3,15 @@ import './App.css'
 import { Route, Routes } from 'react-router'
 import { Signup } from './Component/Signup'
 import { Login } from './Component/Login'
+import { Map } from './Component/Map'
+import SupplierMap from './Component/SupplierMap'
 
 function App() {
 
   return (
     <Routes>
-      <Route path="/login" element={<Login />} />
-      <Route path="/" element={<Signup />} />
+      <Route path="/" element={ <SupplierMap/>} />
+      <Route path="/login" element={<Signup />} />
     </Routes>
   )
 }
