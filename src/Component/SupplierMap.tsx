@@ -2,17 +2,18 @@ import React, { useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
-
 const suppliers = [
-    { id: 1, name: 'Supplier A', coords: [6.5244, 3.3792], product: 'Product 1' }, // Lagos
-    { id: 2, name: 'Supplier B', coords: [9.0765, 7.3986], product: 'Product 2' }, // Abuja
-    { id: 3, name: 'Supplier C', coords: [10.5105, 7.4165], product: 'Product 3' }, // Kaduna
+    { id: 1, name: 'Supplier A', coords: [6.5244, 3.3792], product: 'Product 1' },
+    { id: 2, name: 'Supplier B', coords: [9.0765, 7.3986], product: 'Product 2' }, 
+    { id: 3, name: 'Supplier C', coords: [10.5105, 7.4165], product: 'Product 3' }, 
+    { id: 4, name: 'Supplier C', coords: [10.5105, 7.4165], product: 'Product 3' }, 
+    { id: 5, name: 'Supplier C', coords: [15.5105, 7.4165], product: 'Product 4' }, 
+    { id: 6, name: 'Supplier C', coords: [23.5105, 7.4165], product: 'Product 5' }, 
 ];
 
 const SupplierMap = () => {
     const [selectedProduct, setSelectedProduct] = useState('');
 
-    // Handle product filtering (optional)
     const filteredSuppliers = suppliers.filter(supplier =>
         selectedProduct ? supplier.product === selectedProduct : true
     );
@@ -32,7 +33,6 @@ const SupplierMap = () => {
                 </label>
             </div>
 
-          
             <MapContainer
                 style={{ height: '600px', width: '100%' }}
                 center={[9.0820, 8.6753]} 
